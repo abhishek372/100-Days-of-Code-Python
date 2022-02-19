@@ -1,11 +1,9 @@
-#Step 5
-
 import random
 from hangman_words import word_list
 from hangman_art import stages, logo
 
-end_of_game = False
-chosen_word = random.choice(word_list)        # Import the word_list 
+# Import the word_list 
+chosen_word = random.choice(word_list)        
 word_length = len(chosen_word)
 lives = 6
 
@@ -20,6 +18,8 @@ display = []
 for _ in range(word_length):
     display += "_"
 
+end_of_game = False
+    
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
 
