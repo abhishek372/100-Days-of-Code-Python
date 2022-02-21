@@ -25,5 +25,24 @@ def encrypt(plain_text, shift_amount):
     print(f"The encoded text is {cipher_text}.")
 
 # Decrypt function
-def decrypt(encrypted_text, shift_amount):
-    decrypted_text = 
+def decrypt(cipher_text, shift_amount):
+    
+    plain_text = ""
+    for letter in cipher_text:
+        position = 0
+        if letter == " ":
+            decrypted_text += " "
+        else:
+            position = alphabet.index(letter)
+            new_position = position - shift_amount
+            if new_position < 0:
+                new_position = len(alphabet) + new_position
+            plain_text += alphabet[new_position]
+
+    print(f"The decoded text is {plain_text}.")
+
+# Check to encode or decode the text
+if direction == "encode":    
+    encrypt(plain_text = text, shift_amount = shift)
+elif direction == "decode":
+    decrypt(cipher_text = text, shift_amount = shift)
