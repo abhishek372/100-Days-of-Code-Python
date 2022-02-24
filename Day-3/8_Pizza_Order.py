@@ -26,7 +26,6 @@ if add_pepperoni=="Y":
         bill +=3
 
 # Condition check for extra_cheese
-
 if extra_cheese=="Y":
     bill += 1
 
