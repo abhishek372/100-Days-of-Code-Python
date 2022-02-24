@@ -10,8 +10,11 @@ no_of_people = int(input("How many people to split the bill? "))
 
 
 bill_with_tip = bill * (tip / 100)
+
+# Total bill
 total_bill = bill+ bill_with_tip
 
+# Bill per person
 bill_per_person = total_bill / no_of_people
 bill_person = round(bill_per_person, 2)
 
